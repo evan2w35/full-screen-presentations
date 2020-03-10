@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import logo from "./logo.svg";
 import Fullscreen from "react-full-screen";
 import { AiOutlineFullscreen } from "react-icons/ai";
 import { GoScreenFull } from "react-icons/go";
+import logo from "./logo.svg";
 import "./App.css";
 
 function App() {

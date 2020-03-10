@@ -7,9 +7,16 @@
   pointer-events: none;
 }
 
+.selected {
+  height: 80vmin;
+  pointer-events: none;
+  padding: 10vmin;
+}
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App-logo,
+  .selected {
+    animation: App-logo-spin infinite 30s linear;
   }
 }
 
@@ -22,10 +29,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {

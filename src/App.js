@@ -15,26 +15,30 @@ function App() {
 
   return (
     <div className="App">
-      <Fullscreen enabled={isFull} onChange={value => goFull(value)}>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {!isFull ? (
-            <button onClick={() => goFull(true)}>Go Fullscreen</button>
-          ) : null}
-          <br />
-          {!isFull ? (
-            <button onClick={() => goFull(true)}>
-              <AiOutlineFullscreen style={style} />
-            </button>
-          ) : null}
-          <br />
-          {!isFull ? (
-            <button onClick={() => goFull(true)}>
-              <GoScreenFull style={style} />
-            </button>
-          ) : null}
-        </header>
-      </Fullscreen>
+      <header className="App-header">
+        <Fullscreen enabled={isFull} onChange={value => goFull(value)}>
+          <img
+            src={logo}
+            className={isFull ? "selected" : "App-logo"}
+            alt="logo"
+          />
+        </Fullscreen>
+        {/* {!isFull ? ( */}
+        <button onClick={() => goFull(true)}>Go Fullscreen</button>
+        {/* ) : null} */}
+        <br />
+        {/* {!isFull ? ( */}
+        <button onClick={() => goFull(true)}>
+          <AiOutlineFullscreen style={style} />
+        </button>
+        {/* ) : null} */}
+        <br />
+        {/* {!isFull ? ( */}
+        <button onClick={() => goFull(true)}>
+          <GoScreenFull style={style} />
+        </button>
+        {/* ) : null} */}
+      </header>
     </div>
   );
 }

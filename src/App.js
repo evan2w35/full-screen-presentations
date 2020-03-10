@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import Fullscreen from "react-full-screen";
+import "./App.css";
 
 function App() {
+  const [isFull, goFull] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Fullscreen enabled={isFull} onChange={full => goFull(full)}>
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          {!isFull ? (
+            <button onClick={() => goFull(true)}>Go Fullscreen</button>
+          ) : null}
+        </header>
+      </Fullscreen>
     </div>
   );
 }

@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Fullscreen enabled={isFull} onChange={full => goFull(full)}>
+      <Fullscreen enabled={isFull} onChange={value => goFull(value)}>
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           {!isFull ? (
